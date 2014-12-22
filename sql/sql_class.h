@@ -3842,6 +3842,7 @@ public:
   {
     main_lex.restore_set_statement_var();
   }
+  LF_PINS *tdc_hash_pins;
 };
 
 

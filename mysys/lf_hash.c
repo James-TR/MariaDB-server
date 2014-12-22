@@ -122,7 +122,7 @@ retry:
     {
       if (unlikely(callback))
       {
-        if (callback(cursor->curr + 1, (void*)key))
+        if (cur_hashnr & 1 && callback(cursor->curr + 1, (void*)key))
           return 1;
       }
       else if (cur_hashnr >= hashnr)
